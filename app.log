@@ -1,0 +1,52 @@
+2023-05-26 17:37:45,937 - INFO - This is an informational message.
+2023-05-26 17:37:45,937 - WARNING - This is a warning message.
+2023-05-26 17:37:45,937 - ERROR - This is an error message.
+2023-05-26 17:37:45,937 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 56, in get
+    self.write(56.88)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-26 17:37:45,939 - ERROR - 500 GET /weather (::1) 239.97ms
+2023-05-26 17:38:51,396 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 53, in get
+    self.write(56.88)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-26 17:38:51,399 - ERROR - 500 GET /weather (::1) 207.48ms
+2023-05-26 17:38:57,538 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 53, in get
+    self.write(56.88)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-26 17:38:57,540 - ERROR - 500 GET /weather (::1) 197.55ms
+2023-05-26 17:39:33,942 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 53, in get
+    self.write("Tel Aviv Weather <br>")
+    ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-26 17:39:33,945 - ERROR - 500 GET /weather (::1) 208.67ms
