@@ -1,6 +1,4 @@
-2023-05-26 17:37:45,937 - INFO - This is an informational message.
-2023-05-26 17:37:45,937 - WARNING - This is a warning message.
-2023-05-26 17:37:45,937 - ERROR - This is an error message.
+
 2023-05-26 17:37:45,937 - ERROR - Uncaught exception GET /weather (::1)
 HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
 Traceback (most recent call last):
@@ -13,40 +11,460 @@ Traceback (most recent call last):
     raise TypeError(message)
 TypeError: write() only accepts bytes, unicode, and dict objects
 2023-05-26 17:37:45,939 - ERROR - 500 GET /weather (::1) 239.97ms
-2023-05-26 17:38:51,396 - ERROR - Uncaught exception GET /weather (::1)
+2023-05-30 22:16:22,218 - INFO - This is an informational message.
+2023-05-30 22:16:22,218 - WARNING - This is a warning message.
+2023-05-30 22:16:22,218 - ERROR - This is an error message.
+2023-05-30 22:16:22,219 - ERROR - Uncaught exception GET /weather (::1)
 HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
     result = await result
              ^^^^^^^^^^^^
-  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 53, in get
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 56, in get
     self.write(56.88)
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
     raise TypeError(message)
 TypeError: write() only accepts bytes, unicode, and dict objects
-2023-05-26 17:38:51,399 - ERROR - 500 GET /weather (::1) 207.48ms
-2023-05-26 17:38:57,538 - ERROR - Uncaught exception GET /weather (::1)
+2023-05-30 22:16:22,221 - ERROR - 500 GET /weather (::1) 208.67ms
+2023-05-30 22:16:23,287 - INFO - This is an informational message.
+2023-05-30 22:16:23,287 - WARNING - This is a warning message.
+2023-05-30 22:16:23,288 - ERROR - This is an error message.
+2023-05-30 22:16:23,288 - ERROR - Uncaught exception GET /weather (::1)
 HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
     result = await result
              ^^^^^^^^^^^^
-  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 53, in get
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 56, in get
     self.write(56.88)
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
     raise TypeError(message)
 TypeError: write() only accepts bytes, unicode, and dict objects
-2023-05-26 17:38:57,540 - ERROR - 500 GET /weather (::1) 197.55ms
-2023-05-26 17:39:33,942 - ERROR - Uncaught exception GET /weather (::1)
+2023-05-30 22:16:23,290 - ERROR - 500 GET /weather (::1) 165.90ms
+2023-05-30 22:22:33,103 - ERROR - Uncaught exception GET /weather (::1)
 HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
     result = await result
              ^^^^^^^^^^^^
-  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 53, in get
-    self.write("Tel Aviv Weather <br>")
-    ^^^^^^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 56, in get
+    self.write(56.88)
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
     raise TypeError(message)
 TypeError: write() only accepts bytes, unicode, and dict objects
-2023-05-26 17:39:33,945 - ERROR - 500 GET /weather (::1) 208.67ms
+2023-05-30 22:22:33,105 - ERROR - 500 GET /weather (::1) 172.74ms
+2023-05-30 22:23:43,614 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 56, in get
+    self.write(56.88)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-30 22:23:43,615 - ERROR - 500 GET /weather (::1) 160.07ms
+2023-05-30 22:24:39,656 - INFO - 200 GET /weather (::1) 162.39ms
+2023-05-30 23:27:16,476 - INFO - 200 GET /weather (::1) 194.94ms
+2023-06-01 15:34:34,325 - INFO - 304 GET / (::1) 4.99ms
+2023-06-01 15:34:38,317 - WARNING - SSL Error on 14 ('192.241.167.16', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:38,319 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 37, in get
+    weather_response = await http_client.fetch(WeatherURL)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/tcpclient.py", line 292, in connect
+    stream = await stream.start_tls(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/iostream.py", line 1367, in _do_ssl_handshake
+    self.socket.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:38,338 - ERROR - 500 GET /weather (::1) 132.18ms
+2023-06-01 15:34:38,442 - WARNING - SSL Error on 14 ('192.241.167.16', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:38,443 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 37, in get
+    weather_response = await http_client.fetch(WeatherURL)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/tcpclient.py", line 292, in connect
+    stream = await stream.start_tls(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/iostream.py", line 1367, in _do_ssl_handshake
+    self.socket.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:38,444 - ERROR - 500 GET /weather (::1) 79.81ms
+2023-06-01 15:34:58,732 - WARNING - SSL Error on 14 ('192.241.167.16', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:58,733 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 37, in get
+    weather_response = await http_client.fetch(WeatherURL)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/tcpclient.py", line 292, in connect
+    stream = await stream.start_tls(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/iostream.py", line 1367, in _do_ssl_handshake
+    self.socket.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:58,734 - ERROR - 500 GET /weather (::1) 96.39ms
+2023-06-01 15:34:59,684 - WARNING - SSL Error on 14 ('192.241.167.16', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:59,685 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 37, in get
+    weather_response = await http_client.fetch(WeatherURL)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/tcpclient.py", line 292, in connect
+    stream = await stream.start_tls(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/iostream.py", line 1367, in _do_ssl_handshake
+    self.socket.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+2023-06-01 15:34:59,687 - ERROR - 500 GET /weather (::1) 82.82ms
+2023-06-01 15:36:15,207 - INFO - 200 GET /weather (::1) 297.19ms
+2023-06-01 15:37:16,815 - INFO - 200 GET /weather (::1) 167.94ms
+2023-06-01 16:38:07,701 - INFO - 200 GET /weather (::1) 256.05ms
+2023-06-01 16:39:28,574 - INFO - 200 GET /weather (::1) 322.66ms
+2023-06-01 18:34:14,293 - INFO - 200 GET /weather (::1) 198.69ms
+2023-06-01 18:34:14,299 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 82, in get
+    cur.execute(query, values)
+psycopg2.errors.UndefinedTable: relation "telvvivweather" does not exist
+LINE 2:                 INSERT INTO telvvivweather (temp, humidity, ...
+                                    ^
+
+2023-06-01 18:34:44,141 - INFO - 200 GET /weather (::1) 168.58ms
+2023-06-01 18:34:44,143 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 82, in get
+    cur.execute(query, values)
+psycopg2.errors.UndefinedTable: relation "telvvivweather" does not exist
+LINE 2:                 INSERT INTO telvvivweather (temp, humidity, ...
+                                    ^
+
+2023-06-01 18:39:37,328 - INFO - 200 GET /weather (::1) 172.07ms
+2023-06-01 18:39:37,348 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 82, in get
+    cur.execute(query, values)
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 3, scale 2 must round to an absolute value less than 10^1.
+
+2023-06-01 18:44:29,785 - INFO - 200 GET /weather (::1) 194.56ms
+2023-06-01 18:44:29,786 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 75, in get
+    async with connection.cursor() as cur:
+TypeError: 'psycopg2.extensions.cursor' object does not support the asynchronous context manager protocol
+2023-06-01 18:48:27,589 - INFO - 200 GET /weather (::1) 162.48ms
+2023-06-01 18:48:27,589 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 75, in get
+    async with connection.cursor() as cur:
+TypeError: 'psycopg2.extensions.cursor' object does not support the asynchronous context manager protocol
+2023-06-01 18:48:28,892 - INFO - 200 GET /weather (::1) 158.41ms
+2023-06-01 18:48:28,893 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 75, in get
+    async with connection.cursor() as cur:
+TypeError: 'psycopg2.extensions.cursor' object does not support the asynchronous context manager protocol
+2023-06-01 18:50:06,972 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 68, in get
+    async with connection.cursor() as cur:
+TypeError: 'psycopg2.extensions.cursor' object does not support the asynchronous context manager protocol
+2023-06-01 18:50:06,975 - ERROR - 500 GET /weather (::1) 187.60ms
+2023-06-01 18:50:08,220 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 68, in get
+    async with connection.cursor() as cur:
+TypeError: 'psycopg2.extensions.cursor' object does not support the asynchronous context manager protocol
+2023-06-01 18:50:08,222 - ERROR - 500 GET /weather (::1) 175.84ms
+2023-06-01 18:50:18,758 - ERROR - Uncaught exception GET /weather (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/weather', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 68, in get
+    async with connection.cursor() as cur:
+TypeError: 'psycopg2.extensions.cursor' object does not support the asynchronous context manager protocol
+2023-06-01 18:50:18,759 - ERROR - 500 GET /weather (::1) 168.52ms
+2023-06-01 18:51:07,392 - INFO - 200 GET /weather (::1) 168.51ms
+2023-06-05 09:42:49,003 - WARNING - 404 GET /favicon.ico (::1) 1.63ms
+2023-06-05 09:42:50,380 - INFO - 200 GET /weather (::1) 270.00ms
+2023-06-05 09:52:05,558 - INFO - 200 GET /weather (::1) 233.98ms
+2023-06-05 10:43:58,666 - INFO - 200 GET /weather (::1) 226.45ms
+2023-06-05 10:44:10,189 - WARNING - 400 GET /country (::1): Missing argument input_value
+2023-06-05 10:44:10,190 - WARNING - 400 GET /country (::1) 0.64ms
+2023-06-05 10:44:20,305 - WARNING - 400 GET /country (::1): Missing argument input_value
+2023-06-05 10:44:20,305 - WARNING - 400 GET /country (::1) 1.00ms
+2023-06-05 10:47:21,020 - INFO - 200 GET /weather (::1) 179.84ms
+2023-06-05 10:47:25,423 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 70, in get
+    self.write(country_data)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects. Lists not accepted for security reasons; see http://www.tornadoweb.org/en/stable/web.html#tornado.web.RequestHandler.write
+2023-06-05 10:47:25,429 - ERROR - 500 GET /country (::1) 176.32ms
+2023-06-05 10:48:45,491 - INFO - 200 GET /country (::1) 287.98ms
+2023-06-05 10:49:07,302 - INFO - 200 GET /country (::1) 138.40ms
+2023-06-05 10:56:23,260 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 70, in get
+    if country_response.status_code == 200 and isinstance(country_data, list):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'HTTPResponse' object has no attribute 'status_code'
+2023-06-05 10:56:23,263 - ERROR - 500 GET /country (::1) 133.15ms
+2023-06-05 10:57:24,820 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 76, in get
+    languages = [lang.get("name") for lang in country.get("languages")]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 76, in <listcomp>
+    languages = [lang.get("name") for lang in country.get("languages")]
+                 ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2023-06-05 10:57:24,824 - ERROR - 500 GET /country (::1) 132.58ms
+2023-06-05 10:57:30,255 - INFO - 200 GET /weather (::1) 166.80ms
+2023-06-05 10:57:34,530 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 76, in get
+    languages = [lang.get("name") for lang in country.get("languages")]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 76, in <listcomp>
+    languages = [lang.get("name") for lang in country.get("languages")]
+                 ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2023-06-05 10:57:34,532 - ERROR - 500 GET /country (::1) 133.96ms
+2023-06-05 11:01:18,940 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 84, in get
+    self.write(f"languages: {', '.join(languages)}<br>")
+                             ^^^^^^^^^^^^^^^^^^^^
+TypeError: sequence item 0: expected str instance, NoneType found
+2023-06-05 11:01:18,943 - ERROR - 500 GET /country (::1) 144.94ms
+2023-06-05 11:02:58,523 - INFO - 200 GET /country (::1) 141.31ms
+2023-06-05 11:09:45,199 - INFO - 200 GET /country (::1) 150.19ms
+2023-06-05 11:09:46,501 - INFO - 200 GET /country (::1) 130.01ms
+2023-06-05 11:10:10,470 - INFO - 200 GET /country (::1) 136.61ms
+2023-06-05 11:10:13,065 - INFO - 200 GET /country (::1) 161.44ms
+2023-06-05 11:12:00,423 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 84, in get
+    self.write(f"{name} information:<br>")
+                  ^^^^
+UnboundLocalError: cannot access local variable 'name' where it is not associated with a value
+2023-06-05 11:12:00,426 - ERROR - 500 GET /country (::1) 130.88ms
+2023-06-05 11:12:26,067 - INFO - 200 GET /country (::1) 137.32ms
+2023-06-05 11:12:51,645 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 84, in get
+    self.write(f"{name} information:<br>")
+                  ^^^^
+UnboundLocalError: cannot access local variable 'name' where it is not associated with a value
+2023-06-05 11:12:51,648 - ERROR - 500 GET /country (::1) 128.18ms
+2023-06-05 11:16:04,840 - INFO - 200 GET /country (::1) 135.11ms
+2023-06-05 11:16:39,323 - INFO - 200 GET /country (::1) 127.89ms
+2023-06-05 11:17:12,032 - INFO - 200 GET /country (::1) 139.41ms
+2023-06-05 11:18:21,107 - ERROR - Uncaught exception GET /country (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/country', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 79, in get
+    capital = country.get("capital").get("capital")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+2023-06-05 11:18:21,111 - ERROR - 500 GET /country (::1) 150.95ms
+2023-06-05 11:18:43,564 - INFO - 200 GET /country (::1) 132.83ms
+2023-06-05 11:20:37,503 - INFO - 200 GET /country (::1) 130.57ms
+2023-06-05 11:21:18,628 - INFO - 200 GET /weather (::1) 208.29ms
+2023-06-05 11:27:06,099 - INFO - 200 GET /country (::1) 166.57ms
+2023-06-05 11:33:28,881 - INFO - 200 GET /country (::1) 170.56ms
+2023-06-05 15:06:14,949 - INFO - 200 GET /country (::1) 408.12ms
+2023-06-05 15:06:24,171 - INFO - 200 GET /weather (::1) 245.29ms
+2023-06-05 15:12:53,665 - ERROR - Uncaught exception GET /joke (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/joke', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 67, in get
+    joke_data = json.loads(joke_response.body)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-06-05 15:12:53,672 - ERROR - 500 GET /joke (::1) 412.07ms
+2023-06-05 15:16:19,734 - INFO - 200 GET /joke (::1) 194.03ms
+2023-06-05 15:16:37,895 - INFO - 200 GET /joke (::1) 213.71ms
+2023-06-05 15:16:43,187 - INFO - 200 GET /joke (::1) 215.07ms
+2023-06-05 17:41:17,169 - ERROR - Uncaught exception GET /joke (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/joke', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/web.py", line 1786, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/natalie/Voom/voomWarmUp/voomApp.py", line 57, in get
+    joke_response = await http_client.fetch(JokeURL, params = params)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tornado/httpclient.py", line 286, in fetch
+    request = HTTPRequest(url=request, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: HTTPRequest.__init__() got an unexpected keyword argument 'params'
+2023-06-05 17:41:17,172 - ERROR - 500 GET /joke (::1) 5.96ms
+2023-06-05 17:44:15,214 - INFO - 200 GET /joke (::1) 278.99ms
+2023-06-05 17:44:27,308 - INFO - 200 GET /joke (::1) 201.84ms
+2023-06-05 17:46:49,849 - INFO - 200 GET /joke (::1) 218.24ms
+2023-06-05 17:47:30,701 - INFO - 200 GET /joke (::1) 557.78ms
+2023-06-05 17:48:42,386 - INFO - 200 GET /joke (::1) 542.49ms
+2023-06-05 17:48:45,970 - INFO - 200 GET /joke (::1) 497.50ms
+2023-06-05 17:48:55,082 - INFO - 200 GET /joke (::1) 518.00ms
+2023-06-05 17:49:03,622 - INFO - 200 GET /joke (::1) 460.99ms
+2023-06-05 17:49:09,466 - INFO - 200 GET /joke (::1) 204.93ms
+2023-06-05 20:47:16,158 - INFO - 200 GET /joke (::1) 309.37ms
+2023-06-05 20:49:02,079 - INFO - 200 GET /joke (::1) 222.08ms
+2023-06-05 20:52:51,619 - INFO - 200 GET /joke (::1) 235.47ms
+2023-06-05 20:53:01,897 - INFO - 200 GET /joke (::1) 493.68ms
+2023-06-05 20:53:42,247 - INFO - 200 GET /joke (::1) 246.16ms
+2023-06-05 20:53:50,236 - INFO - 200 GET /joke (::1) 215.26ms
+2023-06-05 20:53:53,082 - INFO - 200 GET /joke (::1) 215.04ms
+2023-06-05 20:53:57,471 - INFO - 200 GET /joke (::1) 203.68ms
+2023-06-05 20:54:04,644 - INFO - 200 GET /joke (::1) 535.90ms
+2023-06-05 20:54:08,856 - INFO - 200 GET /joke (::1) 354.24ms
+2023-06-05 20:54:15,271 - INFO - 200 GET /joke (::1) 251.41ms
+2023-06-05 20:54:17,396 - INFO - 200 GET /joke (::1) 198.05ms
+2023-06-05 20:54:34,259 - INFO - 200 GET /joke (::1) 207.11ms
+2023-06-05 20:54:36,778 - INFO - 200 GET /joke (::1) 204.36ms
+2023-06-05 20:54:41,141 - INFO - 200 GET /joke (::1) 198.51ms
+2023-06-05 20:54:45,048 - INFO - 200 GET /joke (::1) 209.85ms
+2023-06-05 20:54:50,376 - INFO - 200 GET /joke (::1) 197.68ms
+2023-06-05 20:54:52,569 - INFO - 200 GET /joke (::1) 442.19ms
+2023-06-05 20:54:54,981 - INFO - 200 GET /joke (::1) 209.68ms
+2023-06-05 20:54:58,212 - INFO - 200 GET /joke (::1) 201.55ms
+2023-06-05 20:57:36,467 - INFO - 200 GET /joke (::1) 227.85ms
+2023-06-05 20:57:39,388 - INFO - 200 GET /joke (::1) 541.25ms
+2023-06-05 20:57:42,547 - INFO - 200 GET /joke (::1) 194.71ms
+2023-06-05 20:57:45,435 - INFO - 200 GET /joke (::1) 214.45ms
+2023-06-05 20:57:47,128 - INFO - 200 GET /joke (::1) 219.59ms
+2023-06-05 20:57:50,652 - INFO - 200 GET /joke (::1) 491.56ms
+2023-06-05 20:57:53,540 - INFO - 200 GET /joke (::1) 205.10ms
+2023-06-05 20:57:54,927 - INFO - 200 GET /joke (::1) 233.13ms
+2023-06-05 20:58:19,977 - INFO - 200 GET /joke (::1) 209.17ms
+2023-06-05 20:58:31,480 - INFO - 200 GET /joke (::1) 195.01ms
+2023-06-05 20:58:34,071 - INFO - 200 GET /joke (::1) 516.38ms
+2023-06-05 20:58:37,144 - INFO - 200 GET /joke (::1) 448.55ms
+2023-06-05 20:58:39,019 - INFO - 200 GET /joke (::1) 207.93ms
+2023-06-05 20:58:41,954 - INFO - 200 GET /joke (::1) 470.59ms
+2023-06-05 20:58:50,046 - INFO - 200 GET /joke (::1) 193.82ms
+2023-06-05 20:58:52,105 - INFO - 200 GET /joke (::1) 198.71ms
+2023-06-05 20:58:57,057 - INFO - 200 GET /joke (::1) 207.83ms
+2023-06-05 20:58:59,930 - INFO - 200 GET /joke (::1) 417.95ms
+2023-06-05 20:59:01,625 - INFO - 200 GET /joke (::1) 426.17ms
+2023-06-05 20:59:03,062 - INFO - 200 GET /joke (::1) 203.87ms
+2023-06-05 21:07:52,172 - INFO - 200 GET /joke (::1) 303.65ms
