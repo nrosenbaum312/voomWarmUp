@@ -1,12 +1,12 @@
 import asyncio
 import tornado
 import tornado.httpclient
-import requests
 import json 
 import time
 import datetime
 import logging
 import psycopg2 
+import tornado.web
 
 #database connection 
 try: 
@@ -44,6 +44,9 @@ class MainHandler(tornado.web.RequestHandler):
 class JokeHandler(tornado.web.RequestHandler):
 
     async def get(self):
+        self.set_header('Access-Control-Allow-Origin', '*')
+        self.set_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.set_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
         http_client = tornado.httpclient.AsyncHTTPClient(
         defaults=dict(client_cert=None, client_key=None, validate_cert=False)
         )
@@ -70,6 +73,10 @@ class JokeHandler(tornado.web.RequestHandler):
         else:
             joke = joke_data["setup"] + ": <br>" + joke_data["delivery"]
 
+        joke_data['response_time'] = formatted_response_time
+        joke_data['time_stamp'] = formatted_timeStamp
+        updated_joke_data = json.dumps(joke_data)
+
         #database
         with connection.cursor() as cur:
             query = '''
@@ -84,9 +91,7 @@ class JokeHandler(tornado.web.RequestHandler):
             except psycopg2.Error as e:
                 print("Error creating weather table", e)
 
-        self.write("Programming Joke: <br>" f'{joke} <br>')
-        self.write(f"Response Time: {formatted_response_time} ms<br>")
-        self.write(f"Time Stamp: {formatted_timeStamp} <br>")
+        self.write(updated_joke_data)
         self.finish()
 
 
@@ -96,12 +101,17 @@ class JokeHandler(tornado.web.RequestHandler):
 class CountryHandler(tornado.web.RequestHandler):
 
     async def get(self):
+
+        self.set_header('Access-Control-Allow-Origin', '*')
+        self.set_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.set_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
         http_client = tornado.httpclient.AsyncHTTPClient(
         defaults=dict(client_cert=None, client_key=None, validate_cert=False)
         )
 
+        countryName = self.get_query_argument('name')
 
-        CountryURL = f'https://restcountries.com/v3.1/name/Israel'
+        CountryURL = f'https://restcountries.com/v3.1/name/{countryName}'
 
         startTime = time.time()
         country_response = await http_client.fetch(CountryURL)
@@ -118,10 +128,17 @@ class CountryHandler(tornado.web.RequestHandler):
 
         # Parse the JSON response
         country_data = json.loads(country_response.body)
-        
-        country = country_data[0]
+    
+        data = {
+        'response_time': formatted_response_time,
+        'time_stamp': formatted_timeStamp,
+        'capital': capital,
+        'name': name,
+        'population': population,
+        }
 
-        
+        #information for database
+        country = country_data[0]
         capital = country.get("capital")
         if isinstance(capital, list):
             capital = capital[0] if capital else None
@@ -141,13 +158,8 @@ class CountryHandler(tornado.web.RequestHandler):
                 print("written to database")
             except psycopg2.Error as e:
                 print("Error creating weather table", e)
-        
 
-        self.write(f"{name} information:<br>")
-        self.write(f"capital: {capital}<br>")
-        self.write(f"population: {population}<br>")
-        self.write(f"Response Time: {formatted_response_time} ms<br>")
-        self.write(f"Time Stamp: {formatted_timeStamp} <br>")
+        self.write(data)
         self.finish()
 
 
@@ -158,6 +170,9 @@ class CountryHandler(tornado.web.RequestHandler):
 class WeatherHandler(tornado.web.RequestHandler):
     async def get(self):
 
+        self.set_header('Access-Control-Allow-Origin', '*')
+        self.set_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.set_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
         #Is this okay?
         http_client = tornado.httpclient.AsyncHTTPClient(
     defaults=dict(client_cert=None, client_key=None, validate_cert=False)
@@ -173,18 +188,22 @@ class WeatherHandler(tornado.web.RequestHandler):
 
         #response time
         response_time = (endTime - startTime) * 1000
+        # Render the weather information in the response
+        
+        formatted_response_time = round(response_time)
 
-        # Parse the JSON response
+        # add info to json
         weather_data = json.loads(weather_response.body)
+        weather_data['response_time'] = formatted_response_time
+        weather_data['time_stamp'] = formatted_timeStamp
+        updated_weather_data = json.dumps(weather_data)
 
-        # Extract the weather information
+
+        # Extract the weather information for database
         temperature = weather_data['main']['temp']
         humidity = weather_data['main']['humidity']
         weather_conditions = weather_data['weather'][0]['description']
-
-        # Render the weather information in the response
         temp = round_num(temperature - 273.15)
-        formatted_response_time = round(response_time)
 
         #database
         with connection.cursor() as cur:
@@ -200,25 +219,28 @@ class WeatherHandler(tornado.web.RequestHandler):
             except psycopg2.Error as e:
                 print("Error creating weather table", e)
 
-        #printing 
-        self.write("Tel Aviv Weather <br>")
-        self.write(f"Temperature: {temp} C<br>")
-        self.write(f"Humidity: {humidity}%<br>")
-        self.write(f"Weather Conditions: {weather_conditions}<br>")
-        self.write(f"Response Time: {formatted_response_time} ms<br>")
-        self.write(f"Time Stamp: {formatted_timeStamp} <br>")
+        self.write(updated_weather_data)
         self.finish()
 
-       
+class CorsHandler(tornado.web.RequestHandler):
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Origin', '*')
+        self.set_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.set_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+
+    def options(self):
+        # Handle preflight CORS requests
+        self.set_status(204)
+        self.finish()
 
 def make_app():
-    return tornado.web.Application([
+   return tornado.web.Application([
         (r"/", MainHandler),
         (r"/weather", WeatherHandler),
         (r"/country", CountryHandler),
         (r"/joke", JokeHandler),
+        (r".*", CorsHandler),
     ])
-
 async def main():
     app = make_app()
     app.listen(8888)
