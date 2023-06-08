@@ -6,6 +6,11 @@ import axios from 'axios';
 
 const flexFormat = { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly' };
 
+const roundNum = (number) => {
+  const roundedNumber = Math.round(number * 100) / 100;
+  return roundedNumber;
+};
+
 const DashboardPage = () => {
   const[weatherData, setWeatherData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -98,7 +103,7 @@ const DashboardPage = () => {
         <p>Loading...</p>
       ) : (
         <div>
-          <p>Temperature: {weatherData.main.temp}</p>
+          <p>Temperature: {roundNum(weatherData.main.temp -273.15)} C</p>
           <p>Humidity: {weatherData.main.humidity}%</p>
           <p>Conditions: {weatherData.weather[0].description} </p>
           <p>Response Time: {weatherData.response_time}ms </p>
@@ -132,7 +137,7 @@ const DashboardPage = () => {
             </div>
             
             {isLoading2 ? (
-        <p>Loading...</p>
+        <p></p>
       ) : (
         <div>
           <p>name: {countryData.name}</p>

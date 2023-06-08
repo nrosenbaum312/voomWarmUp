@@ -1,6 +1,7 @@
 import asyncio
 import tornado
 import tornado.httpclient
+import requests
 import json 
 import time
 import datetime
@@ -105,6 +106,7 @@ class CountryHandler(tornado.web.RequestHandler):
         self.set_header('Access-Control-Allow-Origin', '*')
         self.set_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
         self.set_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+
         http_client = tornado.httpclient.AsyncHTTPClient(
         defaults=dict(client_cert=None, client_key=None, validate_cert=False)
         )
@@ -129,13 +131,7 @@ class CountryHandler(tornado.web.RequestHandler):
         # Parse the JSON response
         country_data = json.loads(country_response.body)
     
-        data = {
-        'response_time': formatted_response_time,
-        'time_stamp': formatted_timeStamp,
-        'capital': capital,
-        'name': name,
-        'population': population,
-        }
+        
 
         #information for database
         country = country_data[0]
@@ -144,6 +140,14 @@ class CountryHandler(tornado.web.RequestHandler):
             capital = capital[0] if capital else None
         population = country.get("population")
         name = country.get("name").get("common")
+
+        data = {
+        'response_time': formatted_response_time,
+        'time_stamp': formatted_timeStamp,
+        'capital': capital,
+        'name': name,
+        'population': population,
+        }
 
         #database
         with connection.cursor() as cur:
